@@ -1,3 +1,7 @@
 <h1>Add a new Friend</h1>
-{{friends/edit-form}}
+{{friends/edit-form 
+model= model
+save = (action "save")
+cancel = (action "cancel")
+}}
 {{outlet}}

@@ -1,5 +1,12 @@
 {{yield}}
+<div>
+<h2>Friend details</h2>
+<p>{{model.firstName}}</p>
+<p>{{model.lastName}}</p>
+</div>
+
 <form {{action "save" on="submit"}}>
+    <h2>{{errorMessage}}</h2>
     <p>
         <label>First Name:
             {{input value=model.firstName}}
@@ -12,6 +19,11 @@
     </p>
     <p>
         <label>Email:
+            {{input value=model.email}}
+        </label>
+    </p>
+    <p>
+        <label>twitter:
             {{input value=model.twitter}}
         </label>
     </p>

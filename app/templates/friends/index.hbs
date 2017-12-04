@@ -1,6 +1,8 @@
 <h1>Friends Index</h1>
 <ul>
-    {{#each model as |friend index|}}
-        <li>{{friend.id}}-{{friend.firstName}} {{friend.lastName}} {{friend.type}}</li>
-    {{/each}}
+ {{#each model as |friend|}}
+    <li>
+        {{#link-to 'friends.show' friend.id}} {{friend.firstName}} {{friend.lastName}} {{/link-to}}
+    </li>
+{{/each}}
 </ul>
